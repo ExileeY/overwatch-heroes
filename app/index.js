@@ -1,5 +1,5 @@
 import React from 'react'
-import RenderDOM from 'react-dom'
+import ReactDOM from 'react-dom'
 
 class App extends React.Component {
   render() {
@@ -8,4 +8,4 @@ class App extends React.Component {
 }
 
 const root = document.getElementById('root')
-RenderDOM(<App />, root)
+ReactDOM.render(<App />, root)
