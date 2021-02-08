@@ -1,9 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './index.css'
+import Heroes from './components/Heroes'
 
 class App extends React.Component {
   render() {
-    return <h1>APP</h1>
+    return (
+      <div className='container'>
+        <Heroes />
+      </div>
+    )
   }
 }
 

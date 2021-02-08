@@ -1,0 +1,68 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 180px;
+  height: 280px;
+  border-radius: 3px;
+  margin: 0 auto;
+  display: block;
+}
+
+.card {
+  margin: 10px 0;
+  padding: 20px;
+  width: 250px;
+}
+
+.bg-dark {
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
+.center-content h4 {
+  margin-left: 5px;
+}
+
+.center-items {
+  align-items: center;
+}
