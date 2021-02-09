@@ -42,7 +42,7 @@ li {
 }
 
 .bg-dark {
-  background: rgba(0,0,0,0.08);
+  background: rgba(75,0,130,0.08);
   border-radius: 3px;
 }
 
@@ -54,15 +54,18 @@ li {
   text-align: center;
 }
 
-.center-content {
+.card-list {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.card-list li {
   display: flex;
   justify-content: center;
-}
-
-.center-content h4 {
-  margin-left: 5px;
-}
-
-.center-items {
   align-items: center;
+  margin: 10px;
+}
+
+.card-list svg {
+  margin-right: 10px;
 }
