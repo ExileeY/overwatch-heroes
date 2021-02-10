@@ -1,6 +1,7 @@
 import React from 'react'
-import { fetchAllHeroes } from '../utils/api'
+import { fetchHeroes } from '../utils/api'
 import Card from './Card'
+import queryString from 'query-string'
 
 export default class Heroes extends React.Component {
   state = {
@@ -10,23 +11,34 @@ export default class Heroes extends React.Component {
   }
 
   componentDidMount() {
+    this.updateHeroes()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.search !== this.props.location.search) {
+      this.updateHeroes()
+    }
+  }
+
+  updateHeroes = () => {
+    const { role } = queryString.parse(this.props.location.search)
+    
     this.setState({
       heroes: null,
       error: null,
       loadingHeroes: true
     })
-    fetchAllHeroes()
+    fetchHeroes(role)
       .then((heroes) => this.setState({ heroes, loadingHeroes: false }))
       .catch(({ message }) => this.setState({ error: message, loadingHeroes: false }))
   }
 
   render() {
     const { heroes, loadingHeroes, error } = this.state
-
     if (error) {
       return <p className='center-text'>{error}</p>
     }
-
+    
     return (
       <React.Fragment>
         {loadingHeroes === true 

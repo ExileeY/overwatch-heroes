@@ -50,6 +50,10 @@ li {
   justify-content: space-around;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .center-text {
   text-align: center;
 }
@@ -68,4 +72,20 @@ li {
 
 .card-list svg {
   margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.nav-link{
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
 }
