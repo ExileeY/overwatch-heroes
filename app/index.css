@@ -103,3 +103,15 @@ li {
   display: flex;
   justify-content: center;
 }
+
+.hero-info section {
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  font-size: 18px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.hero-info li * {
+  margin: 10px 0;
+}

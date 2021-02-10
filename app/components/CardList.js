@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { GiLifeInTheBalance, GiAges, GiCrossedSwords, GiHeartBeats, GiMailedFist } from 'react-icons/gi'
 import { difficultyStars } from '../utils/helpers'
 
@@ -37,4 +38,13 @@ export default function CardList ({role, difficulty, age, realName, occupation, 
       </li>
     </ul>
   )
+}
+
+CardList.propTypes = {
+  role: PropTypes.string.isRequired,
+  difficulty: PropTypes.number.isRequired,
+  age: PropTypes.string,
+  realName: PropTypes.string,
+  occupation: PropTypes.string.isRequired,
+  affiliation: PropTypes.string.isRequired
 }

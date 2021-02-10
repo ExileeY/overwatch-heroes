@@ -3,6 +3,7 @@ import queryString from 'query-string'
 import { fetchHero } from '../utils/api'
 import Card from './Card'
 import CardList from './CardList'
+import HeroInfo from './HeroInfo'
 
 export default class Hero extends React.Component {
   state = {
@@ -55,25 +56,11 @@ export default class Hero extends React.Component {
                   />
                 </Card>
               </div>
-              <div>
-                <h1 className='center-text'>More info</h1>
-                <section>
-                  <h2>Description</h2>
-                  <p>{hero.description}</p>
-                </section>
-                <section>
-                  <h2>Abilities</h2>
-                  <ul>
-                    {hero.abilities.map(({name: abilityName, description}) => {
-                      return (<li key={abilityName}>{abilityName}</li>)
-                    })}
-                  </ul>
-                </section>
-                <section>
-                  <h2>Back Story</h2>
-                  <p>{hero.story.backStory}</p>
-                </section>
-              </div>
+              <HeroInfo 
+                about={hero.description}
+                abilities={hero.abilities}
+                backStory={hero.story.backStory}
+              />
             </React.Fragment>
         }
       </React.Fragment>
