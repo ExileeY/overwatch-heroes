@@ -1,6 +1,7 @@
 import React from 'react'
 import { fetchHeroes } from '../utils/api'
 import Card from './Card'
+import Loading from './Loading'
 import queryString from 'query-string'
 
 export default class Heroes extends React.Component {
@@ -42,7 +43,7 @@ export default class Heroes extends React.Component {
     return (
       <React.Fragment>
         {loadingHeroes === true 
-          ? <h1 className='center-text'>Loading</h1>
+          ? <Loading text='Loading Heroes'/>
           : <React.Fragment>
               <h1 className='center-text'>Heroes</h1>
               <ul className='grid space-around'>

@@ -4,6 +4,7 @@ import { fetchHero } from '../utils/api'
 import Card from './Card'
 import CardList from './CardList'
 import HeroInfo from './HeroInfo'
+import Loading from './Loading'
 
 export default class Hero extends React.Component {
   state = {
@@ -40,7 +41,7 @@ export default class Hero extends React.Component {
     return (
       <React.Fragment>
         {loadingHero === true
-          ? <h1 className='center-text'>Loading</h1>
+          ? <Loading text='Loading Hero'/>
           : <React.Fragment>
               <div className='center-hr'>
                 <Card 
