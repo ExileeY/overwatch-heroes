@@ -41,7 +41,7 @@ li {
   width: 250px;
 }
 
-.bg-dark {
+.bg-light {
   background: rgba(75,0,130,0.08);
   border-radius: 3px;
 }
@@ -65,7 +65,6 @@ li {
 
 .card-list li {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 10px;
 }
@@ -88,4 +87,19 @@ li {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(178, 24, 192);
+}
+
+.center-hr {
+  display: flex;
+  justify-content: center;
 }

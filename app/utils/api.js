@@ -15,3 +15,14 @@ export function fetchHeroes (role) {
       return sortByRoles(heroes, role) 
     })
 }
+
+export function fetchHero(id) {
+  return fetch(`${api}/hero/${id}`)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.message) {
+        throw new Error('Error fetching hero')
+      }
+      return res
+    })
+}

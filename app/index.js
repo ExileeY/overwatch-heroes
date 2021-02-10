@@ -4,6 +4,7 @@ import './index.css'
 import Heroes from './components/Heroes'
 import Nav from './components/Nav'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Hero from './components/Hero'
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
           <Nav />
           <Route exact path='/' component={Heroes}/>
           <Route exact path='/heroes/:sortId' component={Heroes}/>
+          <Route path="/hero" component={Hero}/>
       ` </div>
       </Router>
     )

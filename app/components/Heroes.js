@@ -50,8 +50,8 @@ export default class Heroes extends React.Component {
                   return (
                     <li key={key}>
                       <Card 
+                        id={key}
                         heroName={heroName}
-                        role={role}
                         portrait={portrait}
                       />
                     </li> 
