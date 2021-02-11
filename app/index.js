@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Heroes from './components/Heroes'
 import Nav from './components/Nav'
+import Loading from './components/Loading'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Hero from './components/Hero'
 import NotFoundPage from './components/NotFoundPage'
 import { ThemeProvider } from './contexts/theme'
+
+const Heroes = React.lazy(() => import('./components/Heroes'))
+const Hero = React.lazy(() => import('./components/Hero'))
 
 class App extends React.Component {
   state = {
@@ -24,12 +26,14 @@ class App extends React.Component {
           <div className={this.state.theme}>
             <div className='container'>
               <Nav />
-              <Switch>
-                <Route exact path='/' component={Heroes}/>
-                <Route exact path='/heroes/:sortId' component={Heroes}/>
-                <Route path="/hero" component={Hero}/>
-                <Route render={() => <NotFoundPage/>}/>
-              </Switch>
+              <React.Suspense fallback={<Loading />}>
+                <Switch>
+                  <Route exact path='/' component={Heroes}/>
+                  <Route exact path='/heroes/:sortId' component={Heroes}/>
+                  <Route exact path="/hero" component={Hero}/>
+                  <Route render={() => <NotFoundPage/>}/>
+                </Switch>
+              </React.Suspense>
             </div>
           </div>
         </ThemeProvider>
