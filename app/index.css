@@ -41,8 +41,19 @@ li {
   width: 250px;
 }
 
+.dark {
+  color: #DADADA;
+  background: #1c2022;
+  min-height: 100%;
+}
+
 .bg-light {
   background: rgba(75,0,130,0.08);
+  border-radius: 3px;
+}
+
+.bg-dark {
+  background: rgba(203,100,255,0.12);
   border-radius: 3px;
 }
 
@@ -105,25 +116,26 @@ li {
 }
 
 .hero-info section {
-  background: rgba(0,0,0,0.08);
-  border-radius: 3px;
   font-size: 18px;
   margin: 20px;
   padding: 20px;
+}
+
+.hero-info-light-bg section {
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+}
+
+.hero-info-dark-bg section {
+  background: rgb(42,44,45);
+  border-radius: 3px;
 }
 
 .hero-info li * {
   margin: 10px 0;
 }
 
-.not-found {
-  background: rgb(243 243 243);
-  border-radius: 5px;
-  height: 390px;
-}
-
-.not-found h1 {
-  font-weight: bold;
-  font-size: 100px;
-  padding: 50px 0;
+.btn-clear {
+  border: none;
+  background: transparent;
 }
