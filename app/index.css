@@ -115,3 +115,15 @@ li {
 .hero-info li * {
   margin: 10px 0;
 }
+
+.not-found {
+  background: rgb(243 243 243);
+  border-radius: 5px;
+  height: 390px;
+}
+
+.not-found h1 {
+  font-weight: bold;
+  font-size: 100px;
+  padding: 50px 0;
+}
